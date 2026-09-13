@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aetheris. — Mobile Legends Player</title>
+
+  <meta name="description"
+        content="Aetheris. — Mobile Legends player dengan rank Mythical Immortal, 62.8% win rate dan Fanny sebagai signature hero.">
+
+  <meta name="keywords"
+        content="Aetheris, Mobile Legends, Fanny, Mythical Immortal, Fanny Galactic Starhawk, MLBB">
+
+  <meta name="author" content="Aetheris.">
+
+  <meta property="og:title" content="Aetheris. — Mobile Legends Player">
+  <meta property="og:description"
+        content="Aetheris. | Mythical Immortal | 62.8% Win Rate | Fanny Main">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 183, 255, .12), transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(116, 0, 255, .14), transparent 30%),
+        #05070d;
+      color: #fff;
+      font-family: "Rajdhani", sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 45px 45px;
+      mask-image: linear-gradient(to bottom, black, transparent);
+    }
+
+    header {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-family: "Orbitron", sans-serif;
+      font-weight: 800;
+      letter-spacing: 3px;
+      font-size: 19px;
+      color: #fff;
+      text-shadow: 0 0 18px #00c8ff;
+    }
+
+    .status {
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #7fe8ff;
+      border: 1px solid rgba(0, 212, 255, .35);
+      padding: 7px 12px;
+      border-radius: 30px;
+      background: rgba(0, 174, 255, .07);
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 130px 7% 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: #58dcff;
+      font-family: "Orbitron", sans-serif;
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Orbitron", sans-serif;
+      font-size: clamp(50px, 9vw, 105px);
+      line-height: .95;
+      letter-spacing: -4px;
+      margin-bottom: 20px;
+      background: linear-gradient(120deg, #fff, #7ae9ff, #8c6cff);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 40px rgba(0, 204, 255, .15);
+    }
+
+    .subtitle {
+      font-size: 21px;
+      color: #aab6c9;
+      line-height: 1.5;
+      max-width: 530px;
+    }
+
+    .hero-image {
+      width: min(480px, 44vw);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      border-radius: 50%;
+      background: #00bfff;
+      filter: blur(100px);
+      opacity: .16;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-height: 650px;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      filter:
+        drop-shadow(0 0 25px rgba(0, 190, 255, .5))
+        drop-shadow(0 0 70px rgba(94, 53, 255, .3));
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 38px;
+    }
+
+    .stat {
+      padding: 17px 12px;
+      border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.035);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Orbitron", sans-serif;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: #7e8ca3;
+      letter-spacing: 1px;
+    }
+
+    section {
+      width: min(1150px, 86%);
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-family: "Orbitron", sans-serif;
+      font-size: 27px;
+      margin-bottom: 28px;
+      letter-spacing: 2px;
+    }
+
+    .section-title span {
+      color: #4bdcff;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid rgba(255,255,255,.08);
+      background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.055),
+        rgba(255,255,255,.018)
+      );
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: inset 0 0 40px rgba(0, 170, 255, .025);
+      backdrop-filter: blur(14px);
+    }
+
+    .profile-card h3 {
+      font-family: "Orbitron", sans-serif;
+      color: #64ddff;
+      margin-bottom: 18px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .info:last-child {
+      border-bottom: 0;
+    }
+
+    .info span:first-child {
+      color: #77869c;
+    }
+
+    .info span:last-child {
+      font-weight: 700;
+    }
+
+    .rank-card {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .rank-card img {
+      width: 125px;
+      height: 125px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(0, 195, 255, .4));
+    }
+
+    .rank-name {
+      font-family: "Orbitron", sans-serif;
+      font-size: 23px;
+      color: #8eeaff;
+    }
+
+    .rank-desc {
+      color: #8491a6;
+      margin-top: 7px;
+    }
+
+    .build-box {
+      margin-top: 25px;
+    }
+
+    .spell {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .spell img {
+      width: 65px;
+      height: 65px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.15);
+      box-shadow: 0 0 20px rgba(0, 190, 255, .18);
+    }
+
+    .spell strong {
+      display: block;
+      font-family: "Orbitron", sans-serif;
+    }
+
+    .spell span {
+      color: #748298;
+      font-size: 14px;
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 14px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item img {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 0 15px rgba(0, 180, 255, .12);
+      transition: .25s;
+    }
+
+    .item img:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 200, 255, .4);
+    }
+
+    .item p {
+      font-size: 12px;
+      color: #8996aa;
+      margin-top: 8px;
+    }
+
+    .social {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.035);
+      padding: 12px 18px;
+      border-radius: 12px;
+      transition: .25s;
+    }
+
+    .social a:hover {
+      border-color: #4ddcff;
+      box-shadow: 0 0 20px rgba(0, 205, 255, .18);
+      transform: translateY(-3px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 45px 20px;
+      color: #526075;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 115px;
+      }
+
+      .hero-image {
+        width: min(500px, 85vw);
+        order: -1;
+      }
+
+      .subtitle {
+        margin: auto;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      .status {
+        display: none;
+      }
+
+      .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+
+      section {
+        width: 90%;
+      }
+
+      h1 {
+        font-size: 55px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .stat strong {
+        font-size: 15px;
+      }
+
+      .card {
+        padding: 21px;
+      }
+
+      .rank-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .items {
+        gap: 10px;
+      }
+
+      .item img {
+        width: 62px;
+        height: 62px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">AETHERIS.</div>
+  <div class="status">ONLINE • MLBB</div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <div class="eyebrow">MOBILE LEGENDS PLAYER</div>
+
+      <h1>Aetheris.</h1>
+
+      <p class="subtitle">
+        Competitive Mobile Legends player focused on
+        mechanical gameplay, fast rotations and Fanny mastery.
+      </p>
+
+      <div class="stats">
+
+        <div class="stat">
+          <strong>IMMORTAL</strong>
+          <span>RANK</span>
+        </div>
+
+        <div class="stat">
+          <strong>62.8%</strong>
+          <span>WIN RATE</span>
+        </div>
+
+        <div class="stat">
+          <strong>ALL ROLE</strong>
+          <span>ROLE</span>
+        </div>
+
+        <div class="stat">
+          <strong>FANNY</strong>
+          <span>SIGNATURE HERO</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FANNY IMAGE -->
+    <div class="hero-image">
+
+      <img
+        src="https://pbs.twimg.com/media/HC0t83VaYAAOfan.jpg"
+        alt="Fanny Galactic Starhawk"
+        loading="eager"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- PROFILE -->
+  <section>
+
+    <h2 class="section-title">
+      PLAYER <span>PROFILE</span>
+    </h2>
+
+    <div class="profile-grid">
+
+      <div class="card profile-card">
+
+        <h3>AETHERIS.</h3>
+
+        <div class="info">
+          <span>Username</span>
+          <span>Aetheris.</span>
+        </div>
+
+        <div class="info">
+          <span>Role</span>
+          <span>All Role</span>
+        </div>
+
+        <div class="info">
+          <span>Rank</span>
+          <span>Mythical Immortal</span>
+        </div>
+
+        <div class="info">
+          <span>Win Rate</span>
+          <span>62.8%</span>
+        </div>
+
+        <div class="info">
+          <span>Hero</span>
+          <span>Fanny</span>
+        </div>
+
+        <div class="info">
+          <span>Skin</span>
+          <span>Galactic Starhawk</span>
+        </div>
+
+      </div>
+
+
+      <!-- RANK -->
+      <div class="card rank-card">
+
+        <img
+          src="https://static.wikia.nocookie.net/mobile-legends/images/5/51/Mythical_Immortal.png"
+          alt="Mythical Immortal Rank"
+          onerror="this.style.display='none'"
+        >
+
+        <div>
+          <div class="rank-name">MYTHICAL IMMORTAL</div>
+
+          <p class="rank-desc">
+            Highest competitive rank in Mobile Legends.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BUILD -->
+  <section>
+
+    <h2 class="section-title">
+      FANNY <span>LOADOUT</span>
+    </h2>
+
+    <div class="card build-box">
+
+      <!-- RETRIBUTION -->
+      <div class="spell">
+
+        <img
+          src="https://esportsku.com/wp-content/uploads/2020/03/retribution.jpeg"
+          alt="Retribution"
+        >
+
+        <div>
+          <strong>RETRIBUTION</strong>
+          <span>Battle Spell • Jungle</span>
+        </div>
+
+      </div>
+
+
+      <!-- ITEMS -->
+      <div class="items">
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/8/8e/Tough_Boots.png"
+            alt="Tough Boots"
+          >
+          <p>Tough Boots</p>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/8/8e/Blade_of_the_Heptaseas.png"
+            alt="Blade of the Heptaseas"
+          >
+          <p>Heptaseas</p>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/5/5b/Malefic_Roar.png"
+            alt="Malefic Roar"
+          >
+          <p>Malefic Roar</p>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/0/0a/Hunter_Strike.png"
+            alt="Hunter Strike"
+          >
+          <p>Hunter Strike</p>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/8/8e/Blade_of_Despair.png"
+            alt="Blade of Despair"
+          >
+          <p>Blade of Despair</p>
+        </div>
+
+        <div class="item">
+          <img
+            src="https://static.wikia.nocookie.net/mobile-legends/images/5/5b/Immortality.png"
+            alt="Immortality"
+          >
+          <p>Immortality</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOCIAL -->
+  <section>
+
+    <h2 class="section-title">
+      FIND <span>ME</span>
+    </h2>
+
+    <div class="social">
+
+      <a
+        href="https://instagram.com/_ndraastwn"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram • @_ndraastwn
+      </a>
+
+      <a
+        href="https://tiktok.com/@ndraastwnnn"
+        target="_blank"
+        rel="noopener"
+      >
+        TikTok • @ndraastwnnn
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 Aetheris. • Mobile Legends Player
+</footer>
+
+</body>
+</html>
